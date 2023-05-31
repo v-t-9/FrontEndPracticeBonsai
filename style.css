@@ -1,0 +1,124 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+header nav{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px 20px 20px 20px;
+}
+header nav ul li{
+    display: inline;
+    list-style-type: none;
+    padding-right: 15px;
+    
+}
+header nav ul li a{
+    text-decoration: none;
+    color: var(--grey);
+    font-weight: bold;
+    font-size: 1.2em;
+}
+header nav ul .green a{
+    padding: 10px 20px 10px 20px;
+    margin: 10px;
+    border-radius: 20px;
+    background-color: var(--green);
+    color: var(--white);
+    border: none;
+}
+header .header-nav-logo-left{
+    display: flex;
+
+}
+header .header-nav-logo-left ul{
+    padding-left: 50px;
+}
+main nav{
+    padding-left: 0px;
+    flex-wrap: wrap;
+    grid-area: 1/1/2/4;
+}
+main nav ul{
+    padding-left: 20px;
+}
+main nav ul li {
+    display: inline;
+    list-style-type: none;
+    padding-right: 15px;  
+}
+
+main nav ul li a {
+    text-decoration: none;
+    color: var(--grey);
+    font-weight: bold;
+    font-size: 1.2em;
+}
+main{
+    display: grid;
+    grid-template-columns: 50fr 30fr 50fr;
+    grid-template-rows: auto auto auto;
+    gap: 2em;
+}
+main h1{
+    text-align: center;
+    grid-area: 2/2/3/3;
+}
+main .plans{
+    grid-area: 3/1/4/4;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(3, 50fr);
+    gap: 0.5em;
+    margin: 20px 20px 20px 20px;
+    padding: 20px 60px 20px 60px;
+}
+main .plans .starter{
+    grid-area: 1/1/2/2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 30px;
+    border: solid 1px var(--grey);
+    padding: 20px;
+}
+main .plans ul{
+    list-style-type:none;
+}
+
+main .plans .professional .professional-div {
+    grid-area: 1/2/2/3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 30px;
+    border: solid 1px var(--grey);
+    padding: 20px;
+}
+
+main .plans .business {
+    grid-area: 1/3/2/4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 30px;
+    border: solid 1px var(--grey);
+    padding: 20px;
+
+}
+main .plans article .description{
+    padding: 10px 90px 10px 90px;
+    text-align: center;
+}
+main .plans article ul li{
+    padding: 10px 40px 10px 40px;
+}
+section article button{
+    padding: 10px 20px 10px 20px;
+    margin: 10px;
+    border-radius: 20px;
+    background-color: var(--green);
+    color: var(--white);
+    border: none;
+}
