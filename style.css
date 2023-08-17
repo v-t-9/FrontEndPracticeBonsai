@@ -58,7 +58,7 @@ main nav ul li a {
 main{
     display: grid;
     grid-template-columns: 50fr 30fr 50fr;
-    grid-template-rows: auto auto auto auto auto;
+    grid-template-rows: repeat(6,auto);
     gap: 2em;
 }
 main h1{
@@ -74,16 +74,6 @@ main .plans{
     margin: 20px;
     padding: 20px 60px 20px 60px;
 }
-/* main .plans .starter .starter-div {
-    display: flex;
-    flex-direction: column;
-    align-self: center;
-    align-items: center;
-    border-radius: 30px;
-    border: solid 1px var(--grey);
-    padding: 20px;
-    box-shadow: 1px 2px 6px 2px var(--grey);
-} */
 
 main .plans .starter {
     border-radius: 30px;
@@ -201,6 +191,7 @@ main .add-ons{
 }
 #cost{
     text-align: end;
+    padding: 20px 0px 20px 0px;
 }
 main .add-ons article p {
     padding: 20px;
@@ -213,4 +204,41 @@ main .add-ons article a {
     padding: 20px;
     color: var(--green);
     font-weight: bold;
+}
+main .faq{
+    grid-area: 6/1/7/4;
+    display: grid;
+    grid-template-areas:    "h1-faq image"
+                            "questions image";
+    grid-template-columns: 80fr 20fr;
+    grid-template-rows:min-content;
+}
+main .faq .h1-faq{
+    text-align: left;
+    padding: 5px 30px 5px 30px;
+    grid-area: h1-faq;
+    height: min-content;
+}
+main .faq img{
+    grid-area: image;
+    max-width: 100%;
+    max-width: 100%;
+}
+main .faq .accordion-container{
+    grid-area: questions;
+}
+main .faq .accordion-container .accordion {
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    background-color: var(--white)
+}
+
+main .faq .accordion-container .panel {
+    padding: 20px 18px;
+    display: none;
+    overflow: hidden;
 }
