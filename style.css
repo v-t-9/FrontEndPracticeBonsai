@@ -58,12 +58,13 @@ main nav ul li a {
 main{
     display: grid;
     grid-template-columns: 50fr 30fr 50fr;
-    grid-template-rows: repeat(6,auto);
+    grid-template-rows: repeat(9,auto);
     gap: 2em;
 }
 main h1{
     text-align: center;
-    grid-area: 2/2/3/3;
+    grid-area: 2/1/3/4;
+    font-size: 42px;
 }
 main .plans{
     grid-area: 3/1/4/4;
@@ -153,7 +154,8 @@ section article ul li i{
 }
 main .h1-add-ons{
     text-align: center;
-    grid-area: 4/2/5/3;
+    grid-area: 4/1/5/4;
+    font-size: 42px;
 }
 main .add-ons{
     grid-area: 5/1/6/4;
@@ -218,6 +220,7 @@ main .faq .h1-faq{
     padding: 5px 30px 5px 30px;
     grid-area: h1-faq;
     height: min-content;
+    font-size: 42px;
 }
 main .faq img{
     grid-area: image;
@@ -234,11 +237,50 @@ main .faq .accordion-container .accordion {
     text-align: left;
     border: none;
     outline: none;
-    background-color: var(--white)
+    background-color: var(--white);
+    font-size:20px;
 }
 
 main .faq .accordion-container .panel {
     padding: 20px 18px;
     display: none;
     overflow: hidden;
+}
+main .h1-trusted{
+    grid-area: 7/1/8/4;
+}
+main .trusted{
+    grid-area: 8/1/9/4;
+    display: flex;
+    justify-content: center;
+}
+main .trusted img{
+    padding:20px;
+}
+main .opinions{
+    grid-area: 9/1/10/4;
+    display: block;
+    
+}
+main .opinions .horizontal{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: visible;
+    position: relative;
+    
+}
+main .opinions .horizontal span{
+    font-size: 20px;
+    font-weight:bold;
+    color: var(--dark-green);
+    padding: 10px 5px;
+    margin: 5px 15px;
+    border-radius: 10px;
+    background-color: var(--light-grey);
+    line-height: 150%;
+    text-align: center;
+    width: 500px;
+    white-space: nowrap;
+    
 }
