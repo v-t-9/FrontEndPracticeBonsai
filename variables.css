@@ -6,4 +6,9 @@
     --orange: #ee8146;
     --light-grey:#ecf1ec;
     --dark-green:#003c2f;
+    --width: 210px;
+}
+
+:after{
+    width: var(--width);
 }

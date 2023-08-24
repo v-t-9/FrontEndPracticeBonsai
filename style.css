@@ -58,7 +58,7 @@ main nav ul li a {
 main{
     display: grid;
     grid-template-columns: 50fr 30fr 50fr;
-    grid-template-rows: repeat(9,auto);
+    grid-template-rows: repeat(10,auto);
     gap: 2em;
 }
 main h1{
@@ -66,8 +66,83 @@ main h1{
     grid-area: 2/1/3/4;
     font-size: 42px;
 }
+main .section-toggle{
+    grid-area: 3/2/4/3;
+}
+
+main .section-toggle .toggle {
+    position: relative;
+    display: inline-block;
+    width: 350px;
+    height: 40px;
+    border-radius: 100px;
+    border: 2px solid var(--dark-green);
+
+}
+
+main .section-toggle .toggle:after {
+    content: '';
+    position: absolute;
+    width: var(--width);
+    height: 30px;
+    border-radius: 400px;
+    background-color: var(--dark-green);
+    top: 5px;
+    left: 120px;
+    transition: all 0.5s;
+    z-index: -1;
+}
+
+main .section-toggle .checkbox:checked+.toggle::after {
+    left: 15px;
+}
+
+
+main .section-toggle .checkbox:checked+.toggle {  
+    font-weight: bold;
+}
+
+/* Checkbox vanished */
+main .section-toggle .checkbox {
+    display: none;
+}
+main .section-toggle .toggle .toggle-inside{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 35px;
+}
+
+main .section-toggle .toggle .toggle-inside div span {
+    z-index: 2;
+}
+
+main .section-toggle .toggle .toggle-inside #monthly{
+    color:var(--dark-green);
+    font-weight: bold;
+}
+main .section-toggle .toggle .toggle-inside .yearly-div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 180px;
+}
+main .section-toggle .toggle .toggle-inside .yearly-div #yearly {
+    color: var(--light-grey);
+    font-weight: bold;
+}
+main .section-toggle .toggle .toggle-inside .yearly-div .two-months {
+    color: var(--green);
+    font-size: 14px;
+    font-weight: bold;
+    background-color: var(--white);
+    border-radius: 10px;
+    height: 10px;
+    padding: 2px 5px 4px 5px;
+
+}
 main .plans{
-    grid-area: 3/1/4/4;
+    grid-area: 4/1/5/4;
     display: grid;
     grid-template-rows: auto;
     grid-template-columns: repeat(3, 50fr);
@@ -154,11 +229,11 @@ section article ul li i{
 }
 main .h1-add-ons{
     text-align: center;
-    grid-area: 4/1/5/4;
+    grid-area: 6/1/7/4;
     font-size: 42px;
 }
 main .add-ons{
-    grid-area: 5/1/6/4;
+    grid-area: 7/1/8/4;
     display: grid;
     gap: 2em;
     grid-template-areas: "collaborators partners tax-assistant";
@@ -208,7 +283,7 @@ main .add-ons article a {
     font-weight: bold;
 }
 main .faq{
-    grid-area: 6/1/7/4;
+    grid-area: 8/1/9/4;
     display: grid;
     grid-template-areas:    "h1-faq image"
                             "questions image";
@@ -247,10 +322,10 @@ main .faq .accordion-container .panel {
     overflow: hidden;
 }
 main .h1-trusted{
-    grid-area: 7/1/8/4;
+    grid-area: 9/1/10/4;
 }
 main .trusted{
-    grid-area: 8/1/9/4;
+    grid-area: 10/1/11/4;
     display: flex;
     justify-content: center;
 }
@@ -258,7 +333,7 @@ main .trusted img{
     padding:20px;
 }
 main .opinions{
-    grid-area: 9/1/10/4;
+    grid-area: 11/1/12/4;
     display: block;
     
 }

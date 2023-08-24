@@ -42,13 +42,35 @@
                 </ul>
             </nav>
             <h1>Pick the best plan for your business</h1>
+            <script src="toggle.js"></script>
+
+            <section class="section-toggle"> 
+                <input type="checkbox" id="switch" class="checkbox" />
+                
+                <label for="switch" class="toggle" id="toggle" onclick="Toggle()">
+                    <div class="toggle-inside">
+                        <span id="monthly">
+                            monthly
+                        </span>
+                        <div class ="yearly-div">
+                            <span id="yearly">
+                                yearly
+                            </span>
+                            <span class="two-months">
+                                2 months for free
+                            </span>
+                        </div>
+                        
+                    </div>
+                   
+                    
+            </section>
             <section class="plans">
                 <article class="starter">
                         <h2>Starter</h2>
-                        <p><span id="price">$17</span>/month</p>
+                        <p><span id="price" class="price">$17</span>/month</p>
                         <button id="btn-start-for-free">Start for free</button>
-                        <p class="description">Ideal for freelancers and contractors just starting out.
-                            Billed annually.</p>
+                        <p class="description">Ideal for freelancers and contractors just starting out. Billed annually.</p>
                         <ul>
                             <li><i class='bx bx-check'></i> All templates</li>
                             <li><i class='bx bx-check'></i> Unlimited Clients & Projects</li>
@@ -69,10 +91,9 @@
                     <div class="professional-div">
                         
                         <h2>Professional</h2>
-                        <p><span id="price">$32</span>/month</p>
+                        <p><span id="price" class="price">$32</span>/month</p>
                         <button id ="btn-start-for-free">Start for free</button>
-                        <p class="description">Everything a growing independent business needs to thrive
-                            Billed annually.</p>
+                        <p class="description">Everything a growing independent business needs to thrive. Billed annually.</p>
                         <ul>
                             <li><i class='bx bx-check'></i> Everything in Starter, plus:</li>
                             <li><i class='bx bx-check'></i> Custom Branding</li>
@@ -90,10 +111,9 @@
                 </article>
                 <article class="business">
                     <h2>Business</h2>
-                    <p><span id="price">$52</span>/month</p>
+                    <p><span id="price" class="price">$52</span>/month</p>
                     <button id="btn-start-for-free">Start for free</button>
-                    <p class="description">The perfect package for small businesses and agencies.
-                    Billed annually.</p>
+                    <p class="description">The perfect package for small businesses and agencies. Billed annually.</p>
                     <ul>
                         <li><i class='bx bx-check'></i> Everything in Professional, plus:</li>
                         <li><i class='bx bx-check'></i> Subcontractor Management</li>
@@ -111,6 +131,9 @@
                         <button id="btn-start-for-free">Start for free</button>
                 </article>
             </section>
+            
+
+
             <h1 class="h1-add-ons">Take it to the next level with add-ons</h1>
             <section class="add-ons">
                 
@@ -138,7 +161,6 @@
                 </article>
             </section>
             <section class ="faq">
-                <script src="js.js"></script>
                 <h1 class="h1-faq">Frequently asked questions</h1>
                 <img src="img/plant3.png" alt="">
                 <div class="accordion-container">
