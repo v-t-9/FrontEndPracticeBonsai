@@ -158,7 +158,6 @@ main .plans .starter {
     display: flex;
     flex-direction: column;
     align-items: center;
-   /*  justify-content: center; */
     border-radius: 30px;
     padding: 20px;
     box-shadow: 1px 2px 20px -6px var(--grey);
@@ -177,11 +176,12 @@ main .plans .professional .professional-div {
     background-color: var(--white);
     padding: 20px;
     border-radius: 30px;
-    position: relative;
-    top: 10px;
+    position: absolute;
+    top: 40px;
 }
 main .plans .professional .professional-p{
     color: var(--white);
+    margin-bottom: 680px;
 }
 main .plans .professional{
     background-color: var(--orange);
@@ -229,11 +229,11 @@ section article ul li i{
 }
 main .h1-add-ons{
     text-align: center;
-    grid-area: 6/1/7/4;
+    grid-area: 5/1/6/4;
     font-size: 42px;
 }
 main .add-ons{
-    grid-area: 7/1/8/4;
+    grid-area: 6/1/7/4;
     display: grid;
     gap: 2em;
     grid-template-areas: "collaborators partners tax-assistant";
@@ -283,7 +283,7 @@ main .add-ons article a {
     font-weight: bold;
 }
 main .faq{
-    grid-area: 8/1/9/4;
+    grid-area: 7/1/8/4;
     display: grid;
     grid-template-areas:    "h1-faq image"
                             "questions image";
@@ -307,13 +307,14 @@ main .faq .accordion-container{
 }
 main .faq .accordion-container .accordion {
     cursor: pointer;
-    padding: 18px;
+    padding: 18px 30px;
     width: 100%;
     text-align: left;
     border: none;
     outline: none;
     background-color: var(--white);
     font-size:20px;
+    
 }
 
 main .faq .accordion-container .panel {
@@ -322,10 +323,10 @@ main .faq .accordion-container .panel {
     overflow: hidden;
 }
 main .h1-trusted{
-    grid-area: 9/1/10/4;
+    grid-area: 8/1/9/4;
 }
 main .trusted{
-    grid-area: 10/1/11/4;
+    grid-area: 9/1/10/4;
     display: flex;
     justify-content: center;
 }
@@ -333,7 +334,7 @@ main .trusted img{
     padding:20px;
 }
 main .opinions{
-    grid-area: 11/1/12/4;
+    grid-area: 10/1/11/4;
     display: block;
     
 }
@@ -359,3 +360,51 @@ main .opinions .horizontal span{
     white-space: nowrap;
     
 }
+main .images{
+    grid-area: 11/1/12/4;
+    display: grid;
+    gap: 4em;
+    grid-template-areas: "img text";
+    grid-template-columns: 60fr 40fr;
+    margin: 50px 120px;
+}
+main .images #img{
+    grid-area: img;
+    position: relative;
+}
+main .images #img .group-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+main .images #img .leave-img {
+    width: 50%;
+    height: 50%;
+    object-fit: contain;
+    position: absolute;
+    top: 2px;
+    left: 240px;
+}
+main .images div article{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 50%;
+    border-bottom: solid 0.5px var(--light-grey);
+}
+main .images div article h4{
+    font-size: 30px;
+}
+
+main .images div article .support{
+    margin-right: 40px;
+}
+main .images div article .contact-us{
+    color: var(--green);
+    font-weight: bold;
+   
+}
+main .images div article button{
+    width: fit-content;
+}
+

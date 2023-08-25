@@ -12,7 +12,8 @@ function Toggle() {
             descrip[2].textContent = "The perfect package for small businesses and agencies."
             document.getElementById("yearly").style.color = "var(--dark-green)";
             document.getElementById("monthly").style.color = "var(--light-grey)";
-            document.documentElement.style.setProperty('--width', "100px")
+            document.documentElement.style.setProperty('--width', "100px");
+            document.getElementsByClassName("professional-p")[0].textContent = "Most popular";
             
         } else {
 
@@ -24,7 +25,8 @@ function Toggle() {
             descrip[2].textContent = "The perfect package for small businesses and agencies. Billed annually."
             document.getElementById("monthly").style.color = "var(--dark-green)";
             document.getElementById("yearly").style.color = "var(--light-grey)";
-            document.documentElement.style.setProperty('--width', "210px")
+            document.documentElement.style.setProperty('--width', "210px");
+            document.getElementsByClassName("professional-p")[0].textContent = "Best value for money";
         }       
 }
 
