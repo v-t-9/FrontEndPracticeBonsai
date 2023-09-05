@@ -1,6 +1,7 @@
 *{
     padding: 0;
     margin: 0;
+
 }
 header nav{
     display: flex;
@@ -58,7 +59,7 @@ main nav ul li a {
 main{
     display: grid;
     grid-template-columns: 50fr 30fr 50fr;
-    grid-template-rows: repeat(12,auto);
+    grid-template-rows: repeat(13,auto);
     gap: 2em;
 }
 main h1{
@@ -105,12 +106,14 @@ main .section-toggle .checkbox:checked+.toggle {
 /* Checkbox vanished */
 main .section-toggle .checkbox {
     display: none;
+    background-color: var(--dark-green);
 }
 main .section-toggle .toggle .toggle-inside{
     display: flex;
     justify-content: space-around;
     align-items: center;
     height: 35px;
+    border-radius: inherit;
 }
 
 main .section-toggle .toggle .toggle-inside div span {
@@ -126,6 +129,7 @@ main .section-toggle .toggle .toggle-inside .yearly-div{
     justify-content: space-around;
     align-items: center;
     width: 180px;
+  
 }
 main .section-toggle .toggle .toggle-inside .yearly-div #yearly {
     color: var(--light-grey);
@@ -182,6 +186,7 @@ main .plans .professional .professional-div {
 main .plans .professional .professional-p{
     color: var(--white);
     margin-bottom: 680px;
+    background-color: var(--orange);
 }
 main .plans .professional{
     background-color: var(--orange);
@@ -425,5 +430,146 @@ main .trial .trial-div{
     align-items: center;
     width: 100%;
     height: 100%;
+    object-fit: scale-down;
+}
+footer{
+    padding-top: 80px;
+    display: grid;
+    grid-template-rows: 40px auto auto auto;
+    grid-template-columns: 10fr 15fr 15fr 15fr 15fr ;
+    row-gap: 1em;
+
+}
+footer .logo {
+    grid-area: 1/1/2/2;
+    height: 30px;
+    justify-self: center;
+
+}
+footer .company{
+    display: flex;
+    flex-direction: column;
+    grid-area: 2/1/3/2;
+    justify-self: center;
+}
+footer .products{
+    display: flex;
+    flex-direction: column;
+    grid-area: 1/2/3/3;
+    justify-self: center;
+}
+footer .business-types {
+    display: flex;
+    flex-direction: column;
+    grid-area: 1/3/3/4;
+    justify-self: center;
+}
+footer .resources {
+    display: flex;
+    flex-direction: column;
+    grid-area: 1/4/3/5;
+    justify-self: center;
+}
+footer .templates {
+    display: flex;
+    flex-direction: column;
+    grid-area: 1/5/3/6;
+    justify-self: center;
+
+ 
 }
 
+footer .templates .dropdown {
+    display: inline-block;
+    position: relative;
+   
+
+}
+footer .templates .dropdown-options {
+    display: none;
+    position: absolute;
+    overflow: auto;
+}
+footer .templates .dropdown .dropdown-options li a, footer section a{
+    color:var(--dark-green);
+    text-decoration: none;
+    
+}
+
+footer .templates .dropdown .dropdown-options li a:hover,
+footer section a:hover {
+    color: var(--green);
+}
+footer .templates .dropdown button{
+    color: var(--dark-green);
+   
+}
+footer section p{
+    color: var(--dark-green);
+    font-weight: bold;
+    padding-top: 10px;
+   
+}
+
+footer .templates .dropdown button{
+    border: none;
+    background-color: var(--white);
+
+}
+footer .templates .show{
+    display: block;
+    z-index: 300;
+    background-color: var(--white);
+}
+footer section .dropdown .dropdown-options{
+    padding: 5px 5px 10px 0px;
+    width: 150%;
+}
+footer section .dropdown .dropbtn, footer section a{
+    padding: 5px 5px 10px 0px;
+}
+footer section .dropdown .dropdown-options li{
+    padding: 5px 0px 5px 0px;
+    box-sizing: border-box;
+}
+footer .media{
+    grid-area: 3/1/4/6;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    height: 20vh;
+    padding: 10px 30px;
+    border-top: 0.5px solid var(--light-grey);
+}
+footer .media p{
+    padding: 0px;
+}
+footer .media .icons{
+    width: 150px;
+    display: flex;
+    justify-content: space-around;
+}
+footer .media .icons span{
+    background-color: var(--green);
+    display: flex;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+
+}
+footer .media .icons span i{
+    font-size: 25px;
+    color: var(--white);
+   
+}
+footer .grey-text{
+    grid-area: 4/1/5/6;
+}
+footer .grey-text p{
+    color: var(--light-grey);
+    padding: 30px 40px;
+    font-size: 10px;
+}
