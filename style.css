@@ -1,27 +1,41 @@
-*{
+* {
     padding: 0;
     margin: 0;
 
 }
-header nav{
+
+header nav {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     padding: 20px 20px 20px 20px;
+    position: fixed;
+    line-height: 100%;
+    z-index: 500;
+    background-color: var(--white);
+    width: 100%;
+    border-bottom: 0.5px solid var(--light-grey);
+    box-shadow: 0 4px 4px 2px var(--light-grey);
 }
-header nav ul li{
+header nav .nav-left{
+    padding-right: 10px;
+}
+
+header nav ul li {
     display: inline;
     list-style-type: none;
     padding-right: 15px;
-    
+
 }
-header nav ul li a{
+
+header nav ul li a {
     text-decoration: none;
     color: var(--grey);
     font-weight: bold;
     font-size: 1.2em;
 }
-header nav ul .green a{
+
+header nav ul .green a {
     padding: 10px 20px 10px 20px;
     margin: 10px;
     border-radius: 20px;
@@ -29,25 +43,36 @@ header nav ul .green a{
     color: var(--white);
     border: none;
 }
-header .header-nav-logo-left{
+
+header .header-nav-logo-left {
     display: flex;
 
 }
-header .header-nav-logo-left ul{
+
+header .header-nav-logo-left ul {
     padding-left: 50px;
 }
-main nav{
+
+main {
+    position: relative;
+    top: 80px;
+}
+
+main nav {
     padding-left: 0px;
     flex-wrap: wrap;
     grid-area: 1/1/2/4;
+
 }
-main nav ul{
+
+main nav ul {
     padding-left: 20px;
 }
+
 main nav ul li {
     display: inline;
     list-style-type: none;
-    padding-right: 15px;  
+    padding-right: 15px;
 }
 
 main nav ul li a {
@@ -56,18 +81,21 @@ main nav ul li a {
     font-weight: bold;
     font-size: 1.2em;
 }
-main{
+
+main {
     display: grid;
     grid-template-columns: 50fr 30fr 50fr;
-    grid-template-rows: repeat(13,auto);
+    grid-template-rows: repeat(11, auto) 200px ;
     gap: 2em;
 }
-main h1{
+
+main h1 {
     text-align: center;
     grid-area: 2/1/3/4;
     font-size: 42px;
 }
-main .section-toggle{
+
+main .section-toggle {
     grid-area: 3/2/4/3;
 }
 
@@ -99,7 +127,7 @@ main .section-toggle .checkbox:checked+.toggle::after {
 }
 
 
-main .section-toggle .checkbox:checked+.toggle {  
+main .section-toggle .checkbox:checked+.toggle {
     font-weight: bold;
 }
 
@@ -108,7 +136,8 @@ main .section-toggle .checkbox {
     display: none;
     background-color: var(--dark-green);
 }
-main .section-toggle .toggle .toggle-inside{
+
+main .section-toggle .toggle .toggle-inside {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -120,21 +149,24 @@ main .section-toggle .toggle .toggle-inside div span {
     z-index: 2;
 }
 
-main .section-toggle .toggle .toggle-inside #monthly{
-    color:var(--dark-green);
+main .section-toggle .toggle .toggle-inside #monthly {
+    color: var(--dark-green);
     font-weight: bold;
 }
-main .section-toggle .toggle .toggle-inside .yearly-div{
+
+main .section-toggle .toggle .toggle-inside .yearly-div {
     display: flex;
     justify-content: space-around;
     align-items: center;
     width: 180px;
-  
+
 }
+
 main .section-toggle .toggle .toggle-inside .yearly-div #yearly {
     color: var(--light-grey);
     font-weight: bold;
 }
+
 main .section-toggle .toggle .toggle-inside .yearly-div .two-months {
     color: var(--green);
     font-size: 14px;
@@ -145,7 +177,8 @@ main .section-toggle .toggle .toggle-inside .yearly-div .two-months {
     padding: 2px 5px 4px 5px;
 
 }
-main .plans{
+
+main .plans {
     grid-area: 4/1/5/4;
     display: grid;
     grid-template-rows: auto;
@@ -166,8 +199,9 @@ main .plans .starter {
     padding: 20px;
     box-shadow: 1px 2px 20px -6px var(--grey);
 }
-main .plans ul{
-    list-style-type:none;
+
+main .plans ul {
+    list-style-type: none;
 }
 
 main .plans .professional .professional-div {
@@ -183,12 +217,14 @@ main .plans .professional .professional-div {
     position: absolute;
     top: 40px;
 }
-main .plans .professional .professional-p{
+
+main .plans .professional .professional-p {
     color: var(--white);
     margin-bottom: 680px;
     background-color: var(--orange);
 }
-main .plans .professional{
+
+main .plans .professional {
     background-color: var(--orange);
     border-radius: 30px;
     position: relative;
@@ -209,14 +245,17 @@ main .plans .business {
     padding: 20px;
     box-shadow: 1px 2px 20px -6px var(--grey);
 }
-main .plans article .description{
+
+main .plans article .description {
     padding: 10px 90px 10px 90px;
     text-align: center;
 }
-main .plans article ul li{
+
+main .plans article ul li {
     padding: 10px 40px 10px 40px;
 }
-#btn-start-for-free{
+
+#btn-start-for-free {
     padding: 10px 20px 10px 20px;
     margin: 10px;
     border-radius: 20px;
@@ -224,30 +263,34 @@ main .plans article ul li{
     color: var(--white);
     border: none;
 }
-#price{
+
+#price {
     font-size: 2.5em;
 }
-/* icon color*/
-section article ul li i{
+
+section article ul li i {
     color: var(--green);
     font-weight: bold;
 }
-main .h1-add-ons{
+
+main .h1-add-ons {
     text-align: center;
     grid-area: 5/1/6/4;
     font-size: 42px;
 }
-main .add-ons{
+
+main .add-ons {
     grid-area: 6/1/7/4;
     display: grid;
     gap: 2em;
     grid-template-areas: "collaborators partners tax-assistant";
-    grid-template-rows:repeat(50fr);
-    grid-template-columns:repeat(50fr);
+    grid-template-rows: repeat(50fr);
+    grid-template-columns: repeat(50fr);
     margin: 20px;
     padding: 20px 60px 20px 60px;
 }
-.collaborators{
+
+.collaborators {
     grid-area: collaborators;
     border-radius: 30px;
     border: solid 0.1px var(--grey);
@@ -256,7 +299,8 @@ main .add-ons{
     flex-direction: column;
     flex-wrap: wrap;
 }
-.partners{
+
+.partners {
     grid-area: partners;
     border-radius: 30px;
     border: solid 0.1px var(--grey);
@@ -265,51 +309,61 @@ main .add-ons{
     flex-direction: column;
     flex-wrap: wrap;
 }
-.tax-assistant{
+
+.tax-assistant {
     grid-area: tax-assistant;
     border-radius: 30px;
     border: solid 0.1px var(--grey);
     padding: 20px 60px 20px 60px;
 }
-#cost{
+
+#cost {
     text-align: end;
     padding: 20px 0px 20px 0px;
 }
+
 main .add-ons article p {
     padding: 20px;
     text-align: start;
 }
+
 main .add-ons article h3 {
     text-align: center;
 }
+
 main .add-ons article a {
     padding: 20px;
     color: var(--green);
     font-weight: bold;
 }
-main .faq{
+
+main .faq {
     grid-area: 7/1/8/4;
     display: grid;
-    grid-template-areas:    "h1-faq image"
-                            "questions image";
+    grid-template-areas: "h1-faq image"
+        "questions image";
     grid-template-columns: 80fr 20fr;
-    grid-template-rows:min-content;
+    grid-template-rows: min-content;
 }
-main .faq .h1-faq{
+
+main .faq .h1-faq {
     text-align: left;
     padding: 5px 30px 5px 30px;
     grid-area: h1-faq;
     height: min-content;
     font-size: 42px;
 }
-main .faq img{
+
+main .faq img {
     grid-area: image;
     max-width: 100%;
     max-width: 100%;
 }
-main .faq .accordion-container{
+
+main .faq .accordion-container {
     grid-area: questions;
 }
+
 main .faq .accordion-container .accordion {
     cursor: pointer;
     padding: 18px 30px;
@@ -318,8 +372,8 @@ main .faq .accordion-container .accordion {
     border: none;
     outline: none;
     background-color: var(--white);
-    font-size:20px;
-    
+    font-size: 20px;
+
 }
 
 main .faq .accordion-container .panel {
@@ -327,33 +381,39 @@ main .faq .accordion-container .panel {
     display: none;
     overflow: hidden;
 }
-main .h1-trusted{
+
+main .h1-trusted {
     grid-area: 8/1/9/4;
 }
-main .trusted{
+
+main .trusted {
     grid-area: 9/1/10/4;
     display: flex;
     justify-content: center;
 }
-main .trusted img{
-    padding:20px;
+
+main .trusted img {
+    padding: 20px;
 }
-main .opinions{
+
+main .opinions {
     grid-area: 10/1/11/4;
     display: block;
-    
+
 }
-main .opinions .horizontal{
+
+main .opinions .horizontal {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     overflow: visible;
     position: relative;
-    
+
 }
-main .opinions .horizontal span{
+
+main .opinions .horizontal span {
     font-size: 20px;
-    font-weight:bold;
+    font-weight: bold;
     color: var(--dark-green);
     padding: 10px 5px;
     margin: 5px 15px;
@@ -363,9 +423,10 @@ main .opinions .horizontal span{
     text-align: center;
     width: 500px;
     white-space: nowrap;
-    
+
 }
-main .images{
+
+main .images {
     grid-area: 11/1/12/4;
     display: grid;
     gap: 4em;
@@ -373,15 +434,18 @@ main .images{
     grid-template-columns: 60fr 40fr;
     margin: 50px 120px;
 }
-main .images #img{
+
+main .images #img {
     grid-area: img;
     position: relative;
 }
+
 main .images #img .group-img {
     width: 100%;
     height: 100%;
     object-fit: contain;
 }
+
 main .images #img .leave-img {
     width: 50%;
     height: 50%;
@@ -390,37 +454,43 @@ main .images #img .leave-img {
     top: 2px;
     left: 240px;
 }
-main .images div article{
+
+main .images div article {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     height: 50%;
     border-bottom: solid 0.5px var(--light-grey);
 }
-main .images div article h4{
+
+main .images div article h4 {
     font-size: 30px;
 }
 
-main .images div article .support{
+main .images div article .support {
     margin-right: 40px;
 }
-main .images div article .contact-us{
+
+main .images div article .contact-us {
     color: var(--green);
     font-weight: bold;
-   
+
 }
-main .images div article button{
+
+main .images div article button {
     width: fit-content;
 }
 
-main .trial{
+main .trial {
     grid-area: 12/1/13/4;
     padding: 0px 120px;
     display: flex;
     justify-content: center;
 }
-main .trial .trial-div{
+
+main .trial .trial-div {
     border-radius: 25px;
+    margin-bottom:50px;
     padding: 20px 30px;
     background-color: var(--dark-green);
     color: var(--white);
@@ -429,110 +499,129 @@ main .trial .trial-div{
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
-    height: 100%;
-    object-fit: scale-down;
+    height: auto;
+    
 }
-footer{
+
+footer {
+    margin-top: 50px;
     padding-top: 80px;
     display: grid;
     grid-template-rows: 40px auto auto auto;
-    grid-template-columns: 10fr 15fr 15fr 15fr 15fr ;
+    grid-template-columns: 10fr 15fr 15fr 15fr 15fr;
     row-gap: 1em;
 
 }
+
 footer .logo {
     grid-area: 1/1/2/2;
     height: 30px;
     justify-self: center;
 
 }
-footer .company{
+
+footer .company {
     display: flex;
     flex-direction: column;
     grid-area: 2/1/3/2;
     justify-self: center;
 }
-footer .products{
+
+footer .products {
     display: flex;
     flex-direction: column;
     grid-area: 1/2/3/3;
     justify-self: center;
 }
+
 footer .business-types {
     display: flex;
     flex-direction: column;
     grid-area: 1/3/3/4;
     justify-self: center;
 }
+
 footer .resources {
     display: flex;
     flex-direction: column;
     grid-area: 1/4/3/5;
     justify-self: center;
 }
+
 footer .templates {
     display: flex;
     flex-direction: column;
     grid-area: 1/5/3/6;
     justify-self: center;
 
- 
+
 }
 
 footer .templates .dropdown {
     display: inline-block;
     position: relative;
-   
+
 
 }
+
 footer .templates .dropdown-options {
     display: none;
     position: absolute;
     overflow: auto;
 }
-footer .templates .dropdown .dropdown-options li a, footer section a{
-    color:var(--dark-green);
+
+footer .templates .dropdown .dropdown-options li a,
+footer section a {
+    color: var(--dark-green);
     text-decoration: none;
-    
+
 }
 
 footer .templates .dropdown .dropdown-options li a:hover,
 footer section a:hover {
     color: var(--green);
 }
-footer .templates .dropdown button{
+
+footer .templates .dropdown button {
     color: var(--dark-green);
-   
+
 }
-footer section p{
+
+footer section p {
     color: var(--dark-green);
     font-weight: bold;
     padding-top: 10px;
-   
+
 }
 
-footer .templates .dropdown button{
+footer .templates .dropdown button {
     border: none;
     background-color: var(--white);
 
 }
-footer .templates .show{
+
+footer .templates .show {
     display: block;
     z-index: 300;
     background-color: var(--white);
 }
-footer section .dropdown .dropdown-options{
+
+footer section .dropdown .dropdown-options {
     padding: 5px 5px 10px 0px;
     width: 150%;
 }
-footer section .dropdown .dropbtn, footer section a{
+
+footer section .dropdown .dropbtn,
+footer section a {
     padding: 5px 5px 10px 0px;
 }
-footer section .dropdown .dropdown-options li{
+
+footer section .dropdown .dropdown-options li {
     padding: 5px 0px 5px 0px;
     box-sizing: border-box;
 }
-footer .media{
+
+footer .media {
     grid-area: 3/1/4/6;
     display: flex;
     flex-wrap: wrap;
@@ -542,15 +631,18 @@ footer .media{
     padding: 10px 30px;
     border-top: 0.5px solid var(--light-grey);
 }
-footer .media p{
+
+footer .media p {
     padding: 0px;
 }
-footer .media .icons{
+
+footer .media .icons {
     width: 150px;
     display: flex;
     justify-content: space-around;
 }
-footer .media .icons span{
+
+footer .media .icons span {
     background-color: var(--green);
     display: flex;
     width: 50px;
@@ -560,16 +652,19 @@ footer .media .icons span{
     align-items: center;
 
 }
-footer .media .icons span i{
+
+footer .media .icons span i {
     font-size: 25px;
     color: var(--white);
-   
+
 }
-footer .grey-text{
+
+footer .grey-text {
     grid-area: 4/1/5/6;
 }
-footer .grey-text p{
+
+footer .grey-text p {
     color: var(--light-grey);
     padding: 30px 40px;
-    font-size: 10px;
+    font-size: 12px;
 }
