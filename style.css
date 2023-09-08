@@ -1,7 +1,7 @@
 * {
     padding: 0;
     margin: 0;
-
+    font-family: var(--font);
 }
 
 header nav {
@@ -218,9 +218,9 @@ main .plans .professional .professional-div {
     top: 40px;
 }
 
-main .plans .professional .professional-p {
+main .plans .professional #professional-p {
     color: var(--white);
-    margin-bottom: 680px;
+    margin-bottom: 700px;
     background-color: var(--orange);
 }
 
@@ -474,9 +474,19 @@ main .images div article .support {
 main .images div article .contact-us {
     color: var(--green);
     font-weight: bold;
-
+    text-decoration: underline;
+   
 }
 
+main .images div article .contact-us:hover{
+    text-decoration: none;
+    transform-origin: left;
+    transform: scaleX(1);
+    transition: transform 1s ease-out;
+    
+    
+ 
+}
 main .images div article button {
     width: fit-content;
 }

@@ -13,7 +13,8 @@ function Toggle() {
             document.getElementById("yearly").style.color = "var(--dark-green)";
             document.getElementById("monthly").style.color = "var(--light-grey)";
             document.documentElement.style.setProperty('--width', "100px");
-            document.getElementsByClassName("professional-p")[0].textContent = "Most popular";
+            document.getElementById("professional-p").textContent = "Most popular";
+            document.getElementById("professional-p").style.marginBottom = "682px"
             
         } else {
 
@@ -26,7 +27,8 @@ function Toggle() {
             document.getElementById("monthly").style.color = "var(--dark-green)";
             document.getElementById("yearly").style.color = "var(--light-grey)";
             document.documentElement.style.setProperty('--width', "210px");
-            document.getElementsByClassName("professional-p")[0].textContent = "Best value for money";
+            document.getElementById("professional-p").textContent = "Best value for money";
+            document.getElementById("professional-p").style.marginBottom = "700px"
         }       
 }
 
