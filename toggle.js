@@ -26,7 +26,7 @@ function Toggle() {
             descrip[2].textContent = "The perfect package for small businesses and agencies. Billed annually."
             document.getElementById("monthly").style.color = "var(--dark-green)";
             document.getElementById("yearly").style.color = "var(--light-grey)";
-            document.documentElement.style.setProperty('--width', "210px");
+            document.documentElement.style.setProperty('--width', "200px");
             document.getElementById("professional-p").textContent = "Best value for money";
             document.getElementById("professional-p").style.marginBottom = "700px"
         }       

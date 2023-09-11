@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     font-family: var(--font);
+    background-color: var(--white);
 }
 
 header nav {
@@ -11,7 +12,7 @@ header nav {
     padding: 20px 20px 20px 20px;
     position: fixed;
     line-height: 100%;
-    z-index: 500;
+    z-index: 600;
     background-color: var(--white);
     width: 100%;
     border-bottom: 0.5px solid var(--light-grey);
@@ -32,12 +33,12 @@ header nav ul li a {
     text-decoration: none;
     color: var(--grey);
     font-weight: bold;
-    font-size: 1.2em;
+   
 }
 
-header nav ul .green a {
+header nav .nav-right .green a {
     padding: 10px 20px 10px 20px;
-    margin: 10px;
+    margin: 10px 30px;
     border-radius: 20px;
     background-color: var(--green);
     color: var(--white);
@@ -52,7 +53,12 @@ header .header-nav-logo-left {
 header .header-nav-logo-left ul {
     padding-left: 50px;
 }
-
+header .header-nav-logo-left ul li a:hover{
+    color: var(--green);
+}
+header nav .nav-right .log-in a:hover{
+    color: var(--green);
+}
 main {
     position: relative;
     top: 80px;
@@ -79,9 +85,11 @@ main nav ul li a {
     text-decoration: none;
     color: var(--grey);
     font-weight: bold;
-    font-size: 1.2em;
+    
 }
-
+main nav ul li a:hover{
+    color: var(--green);
+}
 main {
     display: grid;
     grid-template-columns: 50fr 30fr 50fr;
@@ -101,11 +109,14 @@ main .section-toggle {
 
 main .section-toggle .toggle {
     position: relative;
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
     width: 350px;
-    height: 40px;
+    height: 50px;
     border-radius: 100px;
     border: 2px solid var(--dark-green);
+    z-index: 500;
 
 }
 
@@ -116,10 +127,10 @@ main .section-toggle .toggle:after {
     height: 30px;
     border-radius: 400px;
     background-color: var(--dark-green);
-    top: 5px;
+    top: 10px;
     left: 120px;
     transition: all 0.5s;
-    z-index: -1;
+
 }
 
 main .section-toggle .checkbox:checked+.toggle::after {
@@ -135,23 +146,29 @@ main .section-toggle .checkbox:checked+.toggle {
 main .section-toggle .checkbox {
     display: none;
     background-color: var(--dark-green);
+
 }
 
 main .section-toggle .toggle .toggle-inside {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 35px;
+    height: 50px;
+    width: 300px;
     border-radius: inherit;
+   
 }
 
 main .section-toggle .toggle .toggle-inside div span {
-    z-index: 2;
+    z-index: 10;
 }
 
 main .section-toggle .toggle .toggle-inside #monthly {
     color: var(--dark-green);
     font-weight: bold;
+    font-size: 14px;
+    background-color: unset;
+    z-index: 10;
 }
 
 main .section-toggle .toggle .toggle-inside .yearly-div {
@@ -159,12 +176,19 @@ main .section-toggle .toggle .toggle-inside .yearly-div {
     justify-content: space-around;
     align-items: center;
     width: 180px;
+    height: 40px;
+    flex-wrap: wrap;
 
 }
 
 main .section-toggle .toggle .toggle-inside .yearly-div #yearly {
     color: var(--light-grey);
     font-weight: bold;
+    height: 15px;
+    padding: 2px 5px 2px 5px;
+    font-size: 14px;
+    background-color: unset;
+
 }
 
 main .section-toggle .toggle .toggle-inside .yearly-div .two-months {
@@ -173,9 +197,8 @@ main .section-toggle .toggle .toggle-inside .yearly-div .two-months {
     font-weight: bold;
     background-color: var(--white);
     border-radius: 10px;
-    height: 10px;
-    padding: 2px 5px 4px 5px;
-
+    height: 15px;
+    padding: 2px 5px 2px 5px;
 }
 
 main .plans {
@@ -453,6 +476,7 @@ main .images #img .leave-img {
     position: absolute;
     top: 2px;
     left: 240px;
+    background-color: unset;
 }
 
 main .images div article {
@@ -511,6 +535,9 @@ main .trial .trial-div {
     width: 100%;
     height: auto;
     
+}
+main .trial .trial-div p{
+    background-color: unset;
 }
 
 footer {
@@ -624,6 +651,7 @@ footer section .dropdown .dropdown-options {
 footer section .dropdown .dropbtn,
 footer section a {
     padding: 5px 5px 10px 0px;
+    font-size: 16px;
 }
 
 footer section .dropdown .dropdown-options li {
@@ -639,7 +667,7 @@ footer .media {
     align-items: center;
     height: 20vh;
     padding: 10px 30px;
-    border-top: 0.5px solid var(--light-grey);
+    border-top: 0.5px solid #d3cccc;
 }
 
 footer .media p {
@@ -666,6 +694,7 @@ footer .media .icons span {
 footer .media .icons span i {
     font-size: 25px;
     color: var(--white);
+    background-color: unset;
 
 }
 
@@ -674,7 +703,7 @@ footer .grey-text {
 }
 
 footer .grey-text p {
-    color: var(--light-grey);
+    color: var(--grey);
     padding: 30px 40px;
     font-size: 12px;
 }
